@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lindenhof Immobilien – Wohnungen und Häuser finden</title>
+  <meta name="description" content="Lindenhof Immobilien: aktuelle Wohnungen und Häuser zum Kauf, persönlich betreut.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#start" class="logo" aria-label="Lindenhof Immobilien – Startseite">
+        <svg width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+          <path d="M3 17 17 4l14 13" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M8 15v13h18V15" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
+          <rect x="14" y="19" width="6" height="9" fill="var(--amber)"/>
+        </svg>
+        <span>Lindenhof <small>Immobilien</small></span>
+      </a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="hauptnavigation">
+        <span class="visually-hidden">Menü öffnen</span>
+        <span class="nav-toggle__bar"></span>
+      </button>
+
+      <nav id="hauptnavigation" class="main-nav" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#start">Startseite</a></li>
+          <li><a href="#immobilien">Immobilien</a></li>
+          <li><a href="#ueber-uns">Über uns</a></li>
+          <li><a href="#kontakt" class="nav-cta">Kontakt</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="start" class="hero">
+      <div class="container hero-inner">
+        <h1>Das Zuhause, das zu Ihrem Leben passt.</h1>
+        <p class="hero-text">Wir begleiten Sie vom ersten Besichtigungstermin bis zur Schlüsselübergabe – persönlich, transparent und mit lokalem Know-how.</p>
+      </div>
+      <svg class="hero-roofline" viewBox="0 0 1200 120" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0 120V80l80-40 80 40v-30l90-40 90 40v50l70-30 70 30V60l100-50 100 50v40l80-40 80 40V70l90-45 90 45v50z" fill="rgba(255,255,255,.07)"/>
+      </svg>
+    </section>
+
+    <!-- Suchleiste -->
+    <div class="container">
+      <form class="search" id="suche" aria-label="Immobiliensuche">
+        <div class="field">
+          <label for="ort">Ort</label>
+          <input type="text" id="ort" name="ort" placeholder="z. B. Musterstadt Mitte" autocomplete="off">
+        </div>
+        <div class="field">
+          <label for="preis">Preis bis</label>
+          <select id="preis" name="preis">
+            <option value="">Beliebig</option>
+            <option value="250000">250.000 €</option>
+            <option value="400000">400.000 €</option>
+            <option value="600000">600.000 €</option>
+            <option value="1000000">1.000.000 €</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="zimmer">Zimmer ab</label>
+          <select id="zimmer" name="zimmer">
+            <option value="">Beliebig</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+          </select>
+        </div>
+        <button type="submit" class="btn">Immobilien finden</button>
+      </form>
+    </div>
+
+    <!-- Angebote -->
+    <section id="immobilien" class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Aktuelle Angebote</h2>
+          <p id="ergebnis" class="result-info" aria-live="polite">3 Immobilien verfügbar</p>
+        </div>
+
+        <div class="cards" id="angebote">
+          <article class="card" data-ort="musterstadt mitte" data-preis="349000" data-zimmer="3">
+            <div class="card-img img-a" role="img" aria-label="Bildplatzhalter: Altbauwohnung">
+              <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><path d="M8 56V16h28v40M36 28h20v28M16 24h4m-4 10h4m-4 10h4m8-20h4m-4 10h4m-4 10h4m16-8h4m-4 10h4" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="badge">Zu verkaufen</span>
+            </div>
+            <div class="card-body">
+              <h3>Helle Altbauwohnung mit Balkon</h3>
+              <p class="location">Musterstadt Mitte</p>
+              <ul class="facts">
+                <li><strong>3</strong> Zimmer</li>
+                <li><strong>86</strong> m²</li>
+                <li><strong>2.</strong> Etage</li>
+              </ul>
+              <div class="card-foot">
+                <p class="price">349.000 €</p>
+                <a href="#kontakt" class="link">Exposé anfragen</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-ort="musterstadt nord" data-preis="585000" data-zimmer="5">
+            <div class="card-img img-b" role="img" aria-label="Bildplatzhalter: Einfamilienhaus">
+              <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><path d="M6 32 32 10l26 22M12 28v28h40V28M26 56V40h12v16" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="badge">Zu verkaufen</span>
+            </div>
+            <div class="card-body">
+              <h3>Einfamilienhaus mit Garten</h3>
+              <p class="location">Musterstadt Nord</p>
+              <ul class="facts">
+                <li><strong>5</strong> Zimmer</li>
+                <li><strong>148</strong> m²</li>
+                <li><strong>620</strong> m² Grundstück</li>
+              </ul>
+              <div class="card-foot">
+                <p class="price">585.000 €</p>
+                <a href="#kontakt" class="link">Exposé anfragen</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card" data-ort="musterstadt süd" data-preis="229000" data-zimmer="2">
+            <div class="card-img img-c" role="img" aria-label="Bildplatzhalter: Apartment">
+              <svg width="64" height="64" viewBox="0 0 64 64" aria-hidden="true"><path d="M10 56V8h30v48M40 24h14v32M18 18h4m4 0h4m-12 10h4m4 0h4m-12 10h4m4 0h4M28 56v-8" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              <span class="badge">Neubau</span>
+            </div>
+            <div class="card-body">
+              <h3>Modernes 2-Zimmer-Apartment</h3>
+              <p class="location">Musterstadt Süd</p>
+              <ul class="facts">
+                <li><strong>2</strong> Zimmer</li>
+                <li><strong>62</strong> m²</li>
+                <li><strong>Aufzug</strong></li>
+              </ul>
+              <div class="card-foot">
+                <p class="price">229.000 €</p>
+                <a href="#kontakt" class="link">Exposé anfragen</a>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <p id="keine-treffer" class="empty" hidden>Keine Immobilie passt zu Ihrer Suche. Erhöhen Sie das Preislimit oder lassen Sie den Ort offen.</p>
+      </div>
+    </section>
+
+    <!-- Über uns -->
+    <section id="ueber-uns" class="section section-alt">
+      <div class="container about">
+        <h2>Über uns</h2>
+        <p>Seit über 20 Jahren vermitteln wir Wohnungen und Häuser in der Region. Wir kennen die Viertel, die Preise und die Menschen dahinter – und beraten Sie so, als würden wir selbst einziehen.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer / Kontakt -->
+  <footer id="kontakt" class="site-footer">
+    <div class="container footer-grid">
+      <div>
+        <p class="footer-title">Lindenhof Immobilien</p>
+        <p>Wir melden uns innerhalb eines Werktags bei Ihnen.</p>
+      </div>
+      <address>
+        <p class="footer-title">Kontakt</p>
+        <p>Musterstraße 12<br>12345 Musterstadt</p>
+        <p><a href="tel:+4912345678900">+49 123 456 789 00</a><br>
+           <a href="mailto:info@lindenhof-immobilien.example">info@lindenhof-immobilien.example</a></p>
+      </address>
+      <div>
+        <p class="footer-title">Öffnungszeiten</p>
+        <p>Mo–Fr 9:00–18:00 Uhr<br>Sa nach Vereinbarung</p>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="jahr">2026</span> Lindenhof Immobilien. Alle Rechte vorbehalten.</p>
+      <p><a href="#">Impressum</a> · <a href="#">Datenschutz</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
